@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 99%;
+    --card: 0 0% 100%;
+    --popover: 0 0% 100%;
+    --foreground: 240 10% 4%;
+    --card-foreground: 240 10% 4%;
+    --popover-foreground: 240 10% 4%;
+    --primary: 174 86% 32%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 239 30% 96%;
+    --secondary-foreground: 24 80% 30%;
+    --muted: 240 8% 96%;
+    --muted-foreground: 240 5% 50%;
+    --accent: 25 95% 95%;
+    --accent-foreground: 25 95% 40%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 240 8% 90%;
+    --input: 240 8% 90%;
+    --ring: 174 86% 32%;
+    --radius: 0.625rem;
+  }
+  .dark {
+    --background: 240 10% 6%;
+    --card: 240 10% 9%;
+    --popover: 240 10% 9%;
+    --foreground: 0 0% 97%;
+    --card-foreground: 0 0% 97%;
+    --popover-foreground: 0 0% 97%;
+    --primary: 174 72% 42%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 240 8% 16%;
+    --secondary-foreground: 0 0% 90%;
+    --muted: 240 8% 14%;
+    --muted-foreground: 240 5% 55%;
+    --accent: 25 70% 16%;
+    --accent-foreground: 25 95% 75%;
+    --destructive: 0 62% 55%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 240 8% 16%;
+    --input: 240 8% 16%;
+    --ring: 174 72% 42%;
+  }
+}
+
+@layer base {
+  * { @apply border-border; }
+  body { @apply bg-background text-foreground; }
+  ::selection { background: #0D9488; color: white; }
+}
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-thumb { background: #0D948840; border-radius: 99px; }
+::-webkit-scrollbar-thumb:hover { background: #0D9488; }

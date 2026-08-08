@@ -1,0 +1,31 @@
+.App {
+    min-height: 100vh;
+    background: hsl(var(--background));
+    color: hsl(var(--foreground));
+}
+
+/* Sharp button override */
+.sharp-btn {
+    border-radius: 0 !important;
+}
+
+/* Hover lift */
+.lift {
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+.lift:hover {
+    transform: translateY(-2px);
+    border-color: #0D9488;
+}
+
+/* Animated stripe */
+@keyframes slide-in {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.slide-in { animation: slide-in 0.5s ease both; }
+.delay-1 { animation-delay: 0.05s; }
+.delay-2 { animation-delay: 0.1s; }
+.delay-3 { animation-delay: 0.15s; }
+.delay-4 { animation-delay: 0.2s; }
+.delay-5 { animation-delay: 0.25s; }
